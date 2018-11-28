@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    {{#if dev}}
+    <link rel="stylesheet" href="./css/vendors.css">
+    <link rel="stylesheet" href="./css/main.css">
+    {{else}}
+    <link rel="stylesheet" href="./css/vendors.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+    {{/if}}
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="hello">
+            <h1 class="title">{{title}}</h1>
+            <button class="button">{{desc}}</button>
+        </section>
+    </div>
+    <script src="js/vendors.min.js"></script>
+    <script src="js/app.bundle.min.js"></script>
+</body>
+
+</html>
