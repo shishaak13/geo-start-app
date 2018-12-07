@@ -1,20 +1,30 @@
 {
-    "tasks": {
-        "handlebars": "./config/tasks/handlebars.js",
-        "scss": "./config/tasks/scss.js",
-        "scripts": "./config/tasks/scripts.js",
-        "del": "./config/tasks/clean.js",
-        "watch": "./config/tasks/watch.js",
-        "server": "./config/tasks/server.js",
-        "images": "./config/tasks/image.js",
-        "copy:fonts": "./config/tasks/fonts.copy.js",
-        "vendor:css": "./config/tasks/vendor.css.js",
-        "vendor:js": "./config/tasks/vendor.js.js"
+  "tasks": {
+    "handlebars": "./config/tasks/handlebars.js",
+    "scss": "./config/tasks/scss.js",
+    "scripts": "./config/tasks/scripts.js",
+    "del": "./config/tasks/clean.js",
+    "watch": "./config/tasks/watch.js",
+    "server": "./config/tasks/server.js",
+    "images": "./config/tasks/image.js",
+    "copy:fonts": "./config/tasks/fonts.copy.js",
+    "vendor:css": "./config/tasks/vendor.css.js",
+    "vendor:js": "./config/tasks/vendor.js.js"
+  },
+  "plugins": [
+    {
+      "type": "vendorCss",
+      "name": "normalize",
+      "url": "./node_modules/normalize.css/normalize.css",
+      "activated": false
     },
-    "vendorCss": [
-        "./node_modules/normalize.css/normalize.css"
-    ],
-    "vendorJs": [
-        "./node_modules/jquery/dist/jquery.min.js"
-    ]
+    {
+      "type": "vendorJs",
+      "name": "jquery",
+      "url": "./node_modules/jquery/dist/jquery.min.js",
+      "activated": false
+    }
+  ],
+  "vendorCss": [],
+  "vendorJs": []
 }

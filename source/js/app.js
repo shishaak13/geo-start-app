@@ -1,13 +1,15 @@
-const test = require('./components/test');
+const form = document.querySelector('form');
+document.querySelector('#button').addEventListener('click', () => {
+    document.querySelector('#sidebar').classList.add('sidebar_show');
+});
 
-test('hello webpack');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-const test2 = () => {
-    console.log('hi');
-}
+    const formData = new FormData(form);
 
-test2();
-
-$(document).ready(function () {
-    console.log('hi jquery', $);
+    fetch('/settings', { method: "POST", body: formData })
+        .then((response) => {
+            console.log(response);
+        })
 });
