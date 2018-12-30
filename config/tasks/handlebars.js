@@ -6,11 +6,11 @@ module.exports = () => {
     _.gulp.task('handlebars', function () {
         let options = {
             ignorePartials: true,
-            batch: ['./source/view/partials'],
+            batch: ['./source/view/components'],
         }
 
         return _.gulp.src('./source/view/*.hbs')
-            .pipe(_.handlebars(content, options))
+            .pipe(_.glp.compileHandlebars(content, options))
             .pipe(_.glp.rename((path) => {
                 path.extname = '.html'
             }))

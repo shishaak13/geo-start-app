@@ -1,15 +1,12 @@
 const express = require('express');
 const app = express();
-const multer = require('multer');
-const upload = multer();
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
-
 const adapter = new FileSync('./config/path.json');
 const settings = low(adapter)
+const opn = require('opn');
 // respond with "hello world" when a GET request is made to the homepage
 // parse various different custom JSON types as JSON
-app.use(upload.array());
 app.use('/', express.static('dist'));
 app.post('/settings', function (req, res) {
 
@@ -35,7 +32,8 @@ app.post('/settings', function (req, res) {
     res.send();
 });
 
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
+app.listen(3000, () => {
+    console.log('App listening on port 3000!');
+    opn('http://localhost:3000');
 });
 

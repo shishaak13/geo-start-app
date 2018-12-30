@@ -9,22 +9,8 @@
     "images": "./config/tasks/image.js",
     "copy:fonts": "./config/tasks/fonts.copy.js",
     "vendor:css": "./config/tasks/vendor.css.js",
-    "vendor:js": "./config/tasks/vendor.js.js"
-  },
-  "plugins": [
-    {
-      "type": "vendorCss",
-      "name": "normalize",
-      "url": "./node_modules/normalize.css/normalize.css",
-      "activated": false
-    },
-    {
-      "type": "vendorJs",
-      "name": "jquery",
-      "url": "./node_modules/jquery/dist/jquery.min.js",
-      "activated": false
-    }
-  ],
-  "vendorCss": [],
-  "vendorJs": []
+    "vendor:js": "./config/tasks/vendor.js.js",
+    "sprite:svg": "./config/tasks/svg.sprite.js",
+    "done": "./config/tasks/done.js"
+  }
 }
