@@ -4,13 +4,6 @@
   font-weight: $weight;
 }
 
-@mixin font($font-name, $serif, $weight) {
-  @if ($font-name == "sans") {
-    font-family: "Open Sans", $serif;
-    font-weight: $weight;
-  }
-}
-
 //helpers
 @mixin circle($width, $bg) {
   width: $width;

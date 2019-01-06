@@ -1,6 +1,5 @@
 const sortPath = (paths) => {
     const pathList = [];
-
     (function recursiveSortPath(paths) {
         paths.forEach(path => {
             if (Array.isArray(path)) {
@@ -10,6 +9,7 @@ const sortPath = (paths) => {
             }
         });
     })(paths);
+
 
     return pathList;
 }
@@ -25,7 +25,7 @@ exports.parsePlugins = (plugins = [], settings) => {
                     return true;
                 }
 
-                if (plugin.type === 'plugin') {
+                if (plugin.type === 'plugin' && (settings.type === 'css' || settings.type === 'js')) {
                     return true;
                 }
             })
@@ -42,4 +42,3 @@ exports.parsePlugins = (plugins = [], settings) => {
         throw new Error('plugins in not found');
     }
 }
-

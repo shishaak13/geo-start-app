@@ -10,6 +10,7 @@
     "copy:fonts": "./config/tasks/fonts.copy.js",
     "vendor:css": "./config/tasks/vendor.css.js",
     "vendor:js": "./config/tasks/vendor.js.js",
-    "sprite:svg": "./config/tasks/svg.sprite.js"
+    "sprite:svg": "./config/tasks/svg.sprite.js",
+    "inject": "./config/tasks/inject.js"
   }
 }

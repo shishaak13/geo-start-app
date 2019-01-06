@@ -9,58 +9,18 @@
     <meta name="author" content={{author}}>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}}</title>
-    {{#if dev}}
-    <link rel="stylesheet" href="./css/vendors.css">
-    <link rel="stylesheet" href="./css/main.css">
-    {{else}}
-    <link rel="stylesheet" href="./css/vendors.min.css">
-    <link rel="stylesheet" href="./css/main.min.css">
-    {{/if}}
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- build:sdk -->
+    <!-- endbuild -->
 </head>
 
 <body>
     <div class="wrapper">
-        <section class="hello">
-            <h1 class="title">{{title}}</h1>
-            <button class="button" id="button">{{desc}}</button>
-            <aside class="sidebar" id="sidebar">
-                <form class="form" action="#" enctype="multipart/form-data">
-                    <div class="form__module">
-                        <h2 class="form__title">CSS modules</h2>
-                        <label class="form__label">
-                            <input type="checkbox" name="normalize" value="true" class="form__input" checked>
-                            <span class="form__input-fake"></span>
-                            <span class="form__label-text">normalize.css</span>
-                        </label>
-                        <label class="form__label">
-                            <input type="checkbox" name="bootstrap" value="true" class="form__input">
-                            <span class="form__input-fake"></span>
-                            <span class="form__label-text">bootstrap 4</span>
-                        </label>
-                    </div>
-                    <div class="form__module">
-                        <h2 class="form__title">JS modules</h2>
-                        <label class="form__label">
-                            <input type="checkbox" name="jquery" value="true" class="form__input" checked>
-                            <span class="form__input-fake"></span>
-                            <span class="form__label-text">jquery</span>
-                        </label>
-                    </div>
-                    <div class="form__module">
-                        <h2 class="form__title">Jquery plugins</h2>
-                        <label class="form__label">
-                            <input type="checkbox" name="owlcarousel2" value="true" class="form__input">
-                            <span class="form__input-fake"></span>
-                            <span class="form__label-text">Owl carousel 2</span>
-                        </label>
-                    </div>
-                    <button class="button">inject</button>
-                </form>
-            </aside>
-        </section>
+        HELLO :)
     </div>
-    <script src="js/vendors.min.js"></script>
-    <script src="js/app.bundle.min.js"></script>
+    <!-- inject:js -->
+    <!-- endinject -->
 </body>
 
 </html>

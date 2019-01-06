@@ -2,9 +2,9 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     output: {
-        filename: 'app.bundle.min.js'
+        filename: 'main.min.js'
     },
-    mode: process.argv[2] == '--dev' ? 'development' : 'production',
+    mode: process.env.NODE_ENV,
     module: {
         rules: [
             {
@@ -16,6 +16,10 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
+            },
+            {
+                test: /\.hbs$/,
+                loader: "handlebars-loader"
             }
         ]
     }

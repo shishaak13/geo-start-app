@@ -14,6 +14,6 @@ module.exports = () => {
             .pipe(_.glp.rename((path) => {
                 path.extname = '.html'
             }))
-            .pipe(_.gulp.dest('dist'));
+            .pipe(_.gulp.dest('./dist'));
     });
 }
