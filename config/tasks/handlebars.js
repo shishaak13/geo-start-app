@@ -5,7 +5,7 @@ content.dev = _.dev;
 module.exports = () => {
     _.gulp.task('handlebars', function () {
         let options = {
-            ignorePartials: true,
+            ignorePartials: false,
             batch: ['./source/view/components'],
         }
 
