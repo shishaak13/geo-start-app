@@ -37,7 +37,7 @@
     "type": "API",
     "name": "Google map API",
     "url": "https://maps.googleapis.com/maps/api/js?key=AIzaSyAD-N55uT4bDIwV7xqmwUvUvmUgohgWcBE",
-    "activated": false
+    "activated": true
   },
   {
     "type": "API",

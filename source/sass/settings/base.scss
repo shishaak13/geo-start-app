@@ -72,3 +72,19 @@ textarea {
   width: 95%;
   max-width: $container;
 }
+
+#map {
+  height: 100%;
+}
+
+.popup{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: none;
+  font-size: 16px;
+}
