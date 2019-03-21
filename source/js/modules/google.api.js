@@ -8,6 +8,8 @@ module.exports = class {
 
         this.map.addListener('click', async (e) => {
             const coords = { lat: e.latLng.lat(), lng: e.latLng.lng() }
+
+            this.createPlacemark(coords);
             const address = await this.getAddress(coords);
 
             const popup = document.querySelector('.popup');
@@ -22,6 +24,7 @@ module.exports = class {
             position: coords,
             map: this.map
         });
+
     }
 
     async getAddress(coords) {
